@@ -398,6 +398,7 @@
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(75, 53);
             this.button21.TabIndex = 5;
+            this.button21.Text = "Resto";
             this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
@@ -432,7 +433,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowText;
-            this.ClientSize = new System.Drawing.Size(642, 450);
+            this.ClientSize = new System.Drawing.Size(544, 450);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);

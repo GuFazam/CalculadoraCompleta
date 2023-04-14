@@ -158,9 +158,9 @@ namespace CalculadoraCompleta
             {
                 textBoxResultado.Text = Math.Pow(Convert.ToDouble(valor1), Convert.ToDouble(valor2)).ToString();
             }
-            else if (operacao == "PI")
+            else if (operacao == "RESTO")
             {
-                
+                textBoxResultado.Text = Convert.ToString(Convert.ToDouble(valor1 % valor2));
             }
             else // (operacao == "PORCENT") não é necessário escrever na frente do else
             {
@@ -214,7 +214,17 @@ namespace CalculadoraCompleta
 
         private void button21_Click(object sender, EventArgs e)
         {
-            
+            if (textBoxResultado.Text != "")
+            {
+                valor1 = decimal.Parse(textBoxResultado.Text, CultureInfo.InvariantCulture);
+                textBoxResultado.Text = "";
+                operacao = "RESTO";
+                label1.Text = "Resto";
+            }
+            else
+            {
+                MessageBox.Show("Informe um valor para efetuar o resto da divisão");
+            }
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -234,13 +244,13 @@ namespace CalculadoraCompleta
 
         private void button22_Click(object sender, EventArgs e)
         {
-            if (textBoxResultado.Text != "")
-            {
-                valor1 = decimal.Parse(textBoxResultado.Text, CultureInfo.InvariantCulture);
-                textBoxResultado.Text = "";
-                operacao = "PI";
-                label1.Text = "π";
-            }
+            //if (textBoxResultado.Text != "")
+            //{
+            //    valor1 = decimal.Parse(textBoxResultado.Text, CultureInfo.InvariantCulture);
+            //    textBoxResultado.Text = "";
+            //    operacao = "PI";
+            //    label1.Text = "π";
+            //}
         }
 
         private void button17_Click(object sender, EventArgs e)
