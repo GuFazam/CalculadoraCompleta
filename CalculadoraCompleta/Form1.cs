@@ -244,13 +244,17 @@ namespace CalculadoraCompleta
 
         private void button22_Click(object sender, EventArgs e)
         {
-            //if (textBoxResultado.Text != "")
-            //{
-            //    valor1 = decimal.Parse(textBoxResultado.Text, CultureInfo.InvariantCulture);
-            //    textBoxResultado.Text = "";
-            //    operacao = "PI";
-            //    label1.Text = "π";
-            //}
+            if (textBoxResultado.Text != "")
+            {
+                valor1 = decimal.Parse(textBoxResultado.Text, CultureInfo.InvariantCulture);
+                textBoxResultado.Text = Convert.ToString(Convert.ToInt16(valor1 * 4));
+                operacao = "convercao";
+                label1.Text = "$";
+            }
+            else
+            {
+                MessageBox.Show("Informe um valor para efetuar a converção");
+            }
         }
 
         private void button17_Click(object sender, EventArgs e)
